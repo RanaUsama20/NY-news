@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ny_news/MyTheme.dart';
 
 class HomeScreen extends StatelessWidget{
   static const String routeName = 'Home Screen';
