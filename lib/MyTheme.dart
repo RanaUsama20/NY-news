@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class MyTheme{
   static Color primaryLightColor = Color(0xff39A552);
-  static Color greyColor = Color(0xff4F5A69);
+  static Color greyColor = Color(0xff808080);
   static Color redColor = Color(0xffC91C22);
   static Color darkBlueColor = Color(0xff003E90);
   static Color pinkColor = Color(0xffED1E79);
@@ -33,19 +33,19 @@ class MyTheme{
       ),
       textTheme: TextTheme(
         titleLarge: TextStyle(
-            color: whiteColor,
-            fontSize: 22,
-            fontWeight: FontWeight.bold
-        ),
-        titleMedium: TextStyle(
-            color: blackColor,
-            fontSize: 20,
-            fontWeight: FontWeight.bold
-        ),
-        titleSmall: TextStyle(
             color: blackColor,
             fontSize: 18,
             fontWeight: FontWeight.bold
+        ),
+        titleMedium: TextStyle(
+            color: greyColor,
+            fontSize: 16,
+            fontWeight: FontWeight.w400
+        ),
+        titleSmall: TextStyle(
+            color: greyColor,
+            fontSize: 14,
+            fontWeight: FontWeight.w400
         ),
       )
   );
