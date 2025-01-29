@@ -1,5 +1,5 @@
 
-# Route Task
+# Task
 
 A simple flutter app which displayes NewYork Times Most Popular News from an Api.
 
@@ -25,6 +25,10 @@ I used Cubit state management
 <img src="3.jpg" width="200">
 <img src="4.jpg" width="200">
 </p>
+
+## Demo
+
+[Watch the video](video.mp4)
 
 
 
