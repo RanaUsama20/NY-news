@@ -7,7 +7,7 @@ A simple flutter app which displayes NewYork Times Most Popular News from an Api
 
 ## API Reference
 
-#### Get all items
+#### Get all news
 
 ```http
   GET / '(http://api.nytimes.com/svc/mostpopular/v2/{section}/{period}.json?api-key=sample-key)'
