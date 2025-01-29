@@ -1,16 +1,41 @@
-# ny_news
 
-A new Flutter project.
+# Route Task
 
-## Getting Started
+A simple flutter app which displayes NewYork Times Most Popular News from an Api.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## API Reference
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Get all items
+
+```http
+  GET / '(http://api.nytimes.com/svc/mostpopular/v2/{section}/{period}.json?api-key=sample-key)'
+```
+
+
+## Documentation
+
+I used Cubit state management 
+
+## Screenshots
+<p float="left">
+<img src="1.jpg" width="200">
+<img src="2.jpg" width="200">
+<img src="3.jpg" width="200">
+<img src="4.jpg" width="200">
+</p>
+
+
+
+
+## Building the app
+
+ run the following command
+
+```bash
+  flutter clean
+  flutter pub get
+  flutter run
+```
+
