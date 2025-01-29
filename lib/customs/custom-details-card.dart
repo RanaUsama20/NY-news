@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:ny_news/MyTheme.dart';
 
@@ -10,7 +11,8 @@ class DetailsCard extends StatelessWidget{
   final String imageUrl;
   final String date;
 
-   DetailsCard({
+
+  DetailsCard({
     required this.title,
     required this.abstract,
     required this.description,
@@ -18,6 +20,7 @@ class DetailsCard extends StatelessWidget{
     required this.author,
     required this.imageUrl,
     required this.date,
+
   });
   @override
   Widget build(BuildContext context) {
@@ -46,10 +49,12 @@ class DetailsCard extends StatelessWidget{
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                   Text('By $author',
-                       style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                           color: MyTheme.blackColor
-                       )),
+                   Flexible(
+                     child: Text(author,
+                         style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                             color: MyTheme.blackColor
+                         )),
+                   ),
                   Text(date, style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: MyTheme.blackColor
                   )),
@@ -58,11 +63,13 @@ class DetailsCard extends StatelessWidget{
               const SizedBox(height: 12),
               ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
-                child: Image.network(
-                  imageUrl,
-                  height: 200,
+                child: CachedNetworkImage(
+                  imageUrl: imageUrl,
+                  height: 293,
                   width: double.infinity,
                   fit: BoxFit.cover,
+                  placeholder: (context, url) =>  Center(child: CircularProgressIndicator(color: MyTheme.brownColor,)),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
               ),
               const SizedBox(height: 4),

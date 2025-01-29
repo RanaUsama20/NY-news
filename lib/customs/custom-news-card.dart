@@ -6,14 +6,14 @@ class NewsCard extends StatelessWidget{
 
   final String title;
   final String author;
-  final String imageUrl;
+   final String imageUrl;
   final String date;
   final VoidCallback onTap;
 
   const NewsCard({
     required this.title,
     required this.author,
-    required this.imageUrl,
+     required this.imageUrl,
     required this.date,
     required this.onTap,
   });
@@ -22,6 +22,7 @@ class NewsCard extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Card(
+      color: MyTheme.whiteColor,
       elevation: 2,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
@@ -40,7 +41,7 @@ class NewsCard extends StatelessWidget{
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("By $author",
+            Text(author,
                 style: Theme.of(context).textTheme.titleSmall),
             const SizedBox(
                 height: 4),

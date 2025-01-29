@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'HomeScreen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ny_news/network/cubit/cubit.dart';
+import 'Home/HomeScreen.dart';
 import 'MyTheme.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(
+    BlocProvider(
+      create: (context) => NewsCubit(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget{
