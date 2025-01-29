@@ -20,12 +20,10 @@ class ApiManager{
       } else {
         print('Error: ${response.statusCode}, ${response.body}');
         return null;
-        // emit(NewsError('Failed to load news'));
       }
     } catch (e) {
           print('Exception: $e');
           return null;
-      // emit(NewsError('An error occurred: $e'));
     }
   }
   // static Future<String?> fetchArticle(String url) async {

@@ -15,10 +15,12 @@ class NewsCubit extends Cubit<NewsState>{
       if (newsData != null) {
         emit(NewsSuccess(newsData));
       } else {
-        emit(NewsError('Failed to load news'));
+        emit(
+            NewsError('Failed to load news'));
       }
     } catch (e) {
-      emit(NewsError('An error occurred: $e'));
+      emit(
+          NewsError('An error occurred: $e'));
     }
 
 
